@@ -4,3 +4,5 @@
 # Compiled assemblies
 Database/bin/*
 Database/obj/*
+Service/bin/*
+Service/obj/*
