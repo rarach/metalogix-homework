@@ -1,0 +1,6 @@
+# Visual Studio scaffolding files
+.vs/*
+
+# Compiled assemblies
+Database/bin/*
+Database/obj/*
