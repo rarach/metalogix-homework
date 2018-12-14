@@ -7,6 +7,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Databa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{9264A523-F936-45EE-8454-625BB874B548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{FD942C0B-11C5-4A9E-B3D4-D1A51485ADE6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9264A523-F936-45EE-8454-625BB874B548} = {9264A523-F936-45EE-8454-625BB874B548}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +28,10 @@ Global
 		{9264A523-F936-45EE-8454-625BB874B548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9264A523-F936-45EE-8454-625BB874B548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9264A523-F936-45EE-8454-625BB874B548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD942C0B-11C5-4A9E-B3D4-D1A51485ADE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD942C0B-11C5-4A9E-B3D4-D1A51485ADE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD942C0B-11C5-4A9E-B3D4-D1A51485ADE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD942C0B-11C5-4A9E-B3D4-D1A51485ADE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

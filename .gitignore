@@ -2,6 +2,8 @@
 .vs/*
 
 # Compiled assemblies
+Client/bin/*
+Client/obj/*
 Database/bin/*
 Database/obj/*
 Service/bin/*

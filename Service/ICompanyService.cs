@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using System.Collections.Generic;
+using System.ServiceModel;
 using Service.Model;
 
 
@@ -8,7 +9,7 @@ namespace Service
     public interface ICompanyService
     {
         [OperationContract]
-        string GetData(int value);
+        IEnumerable<CompanyType> GetAllCompanyTypes();
 
         [OperationContract]
         Company GetDataUsingDataContract(Company composite);

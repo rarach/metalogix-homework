@@ -10,9 +10,9 @@ namespace Service.Model
     public class CompanyType
     {
         [DataMember]
-        public string Name { get; set; }
+        public int ID { get; set; }
 
         [DataMember]
-        public string Description { get; set; }
+        public string Name { get; set; }
     }
 }

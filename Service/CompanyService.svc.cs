@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Service.DataAccess;
 using Service.Model;
 
 
@@ -8,9 +10,12 @@ namespace Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class CompanyService : ICompanyService
     {
-        public string GetData(int value)
+        private readonly CompanyRepository _repository = new CompanyRepository();
+
+
+        public IEnumerable<CompanyType> GetAllCompanyTypes()
         {
-            return string.Format("You entered: {0}", value);
+            return _repository.GetCompanyTypes();
         }
 
         public Company GetDataUsingDataContract(Company composite)
