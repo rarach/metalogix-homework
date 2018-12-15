@@ -16,9 +16,13 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public Company GetCompany(int Id, string companyName, string countryCode, string companyType)
+        /// <summary>
+        /// Returns filtered list of companies
+        /// </summary>
+        /// <remarks>The name is a bit misleading as it can return collection of valid results</remarks>
+        public IEnumerable<Company> GetCompany(int Id, string companyName, string countryCode, string companyType)
         {
-            throw new NotImplementedException();
+            return _repository.GetCompanies(Id, companyName, countryCode, companyType);
         }
 
         public bool CreateCompany(Company company)

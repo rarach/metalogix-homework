@@ -178,10 +178,10 @@ namespace Client.CompanyServiceReference {
         System.Threading.Tasks.Task<Client.CompanyServiceReference.Company[]> GetAllCompaniesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetCompany", ReplyAction="http://tempuri.org/ICompanyService/GetCompanyResponse")]
-        Client.CompanyServiceReference.Company GetCompany(int Id, string companyName, string countryCode, string companyType);
+        Client.CompanyServiceReference.Company[] GetCompany(int Id, string companyName, string countryCode, string companyType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetCompany", ReplyAction="http://tempuri.org/ICompanyService/GetCompanyResponse")]
-        System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType);
+        System.Threading.Tasks.Task<Client.CompanyServiceReference.Company[]> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateCompany", ReplyAction="http://tempuri.org/ICompanyService/CreateCompanyResponse")]
         bool CreateCompany(Client.CompanyServiceReference.Company company);
@@ -231,11 +231,11 @@ namespace Client.CompanyServiceReference {
             return base.Channel.GetAllCompaniesAsync();
         }
         
-        public Client.CompanyServiceReference.Company GetCompany(int Id, string companyName, string countryCode, string companyType) {
+        public Client.CompanyServiceReference.Company[] GetCompany(int Id, string companyName, string countryCode, string companyType) {
             return base.Channel.GetCompany(Id, companyName, countryCode, companyType);
         }
         
-        public System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType) {
+        public System.Threading.Tasks.Task<Client.CompanyServiceReference.Company[]> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType) {
             return base.Channel.GetCompanyAsync(Id, companyName, countryCode, companyType);
         }
         

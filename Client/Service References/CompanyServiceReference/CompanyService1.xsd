@@ -26,7 +26,7 @@
   <xs:element name="GetCompanyResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Service.Model" minOccurs="0" name="GetCompanyResult" nillable="true" type="q2:Company" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Service.Model" minOccurs="0" name="GetCompanyResult" nillable="true" type="q2:ArrayOfCompany" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

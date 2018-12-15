@@ -27,16 +27,8 @@ namespace Client.DataAccess
 
         internal IList<CompanyItem> GetCompanies(int id, string name, string countryCode, string type)
         {
-            Company[] companies = new[]     //TODO: _service of course
-            {
-                new Company
-                {
-                    ID = 5552604,
-                    Name = "Mikro Korp",
-                    CountryCode = "ARG",
-                    Type = new CompanyType {Name = "SAles"}
-                }
-            };
+            Company[] companies = _service.GetCompany(id, name, countryCode, type);
+
             return
                 companies.Select(
                     c =>

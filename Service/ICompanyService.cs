@@ -12,7 +12,7 @@ namespace Service
         IEnumerable<Company> GetAllCompanies();
 
         [OperationContract]
-        Company GetCompany(int Id, string companyName, string countryCode, string companyType);
+        IEnumerable<Company> GetCompany(int Id, string companyName, string countryCode, string companyType);
 
         [OperationContract]
         bool CreateCompany(Company company);

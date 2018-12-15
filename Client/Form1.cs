@@ -1,9 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Windows.Forms;
-
 using Client.DataAccess;
-using Client.ViewModel;
 
 
 namespace Client
@@ -17,28 +14,20 @@ namespace Client
         {
             _dataRepo = dataClient;
             InitializeComponent();
-            cbCompanyTypes.DataSource = _dataRepo.GetCompanyTypes();
-            cbCompanyTypes.SelectedIndex = -1;
-
-
-
             Load += OnLoad;
-
-            
         }
 
         private void OnLoad(object sender, EventArgs eventArgs)
         {
-            gridResults.DataSource = _dataRepo.GetCompanies(123, null, null, null);
+            cbCompanyTypes.DataSource = _dataRepo.GetCompanyTypes();
+            cbCompanyTypes.SelectedIndex = -1;
         }
-
-
-
-
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-
+            int dummy;
+            int id = int.TryParse(txtCompanyId.Text, out dummy) ? dummy : -1;
+            gridResults.DataSource = _dataRepo.GetCompanies(id, /*todo txtCompanyName.Text*/null, txtCountryCode.Text, cbCompanyTypes.SelectedText);
         }
 
         private void btnAddCompany_Click(object sender, EventArgs e)
