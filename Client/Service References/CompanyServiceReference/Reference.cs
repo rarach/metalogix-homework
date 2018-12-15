@@ -15,67 +15,6 @@ namespace Client.CompanyServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompanyType", Namespace="http://schemas.datacontract.org/2004/07/Service.Model")]
-    [System.SerializableAttribute()]
-    public partial class CompanyType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://schemas.datacontract.org/2004/07/Service.Model")]
     [System.SerializableAttribute()]
     public partial class Company : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -167,21 +106,94 @@ namespace Client.CompanyServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompanyType", Namespace="http://schemas.datacontract.org/2004/07/Service.Model")]
+    [System.SerializableAttribute()]
+    public partial class CompanyType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CompanyServiceReference.ICompanyService")]
     public interface ICompanyService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllCompanies", ReplyAction="http://tempuri.org/ICompanyService/GetAllCompaniesResponse")]
+        Client.CompanyServiceReference.Company[] GetAllCompanies();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllCompanies", ReplyAction="http://tempuri.org/ICompanyService/GetAllCompaniesResponse")]
+        System.Threading.Tasks.Task<Client.CompanyServiceReference.Company[]> GetAllCompaniesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetCompany", ReplyAction="http://tempuri.org/ICompanyService/GetCompanyResponse")]
+        Client.CompanyServiceReference.Company GetCompany(int Id, string companyName, string countryCode, string companyType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetCompany", ReplyAction="http://tempuri.org/ICompanyService/GetCompanyResponse")]
+        System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateCompany", ReplyAction="http://tempuri.org/ICompanyService/CreateCompanyResponse")]
+        bool CreateCompany(Client.CompanyServiceReference.Company company);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/CreateCompany", ReplyAction="http://tempuri.org/ICompanyService/CreateCompanyResponse")]
+        System.Threading.Tasks.Task<bool> CreateCompanyAsync(Client.CompanyServiceReference.Company company);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllCompanyTypes", ReplyAction="http://tempuri.org/ICompanyService/GetAllCompanyTypesResponse")]
         Client.CompanyServiceReference.CompanyType[] GetAllCompanyTypes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetAllCompanyTypes", ReplyAction="http://tempuri.org/ICompanyService/GetAllCompanyTypesResponse")]
         System.Threading.Tasks.Task<Client.CompanyServiceReference.CompanyType[]> GetAllCompanyTypesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ICompanyService/GetDataUsingDataContractResponse")]
-        Client.CompanyServiceReference.Company GetDataUsingDataContract(Client.CompanyServiceReference.Company composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompanyService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ICompanyService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetDataUsingDataContractAsync(Client.CompanyServiceReference.Company composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -211,20 +223,36 @@ namespace Client.CompanyServiceReference {
                 base(binding, remoteAddress) {
         }
         
+        public Client.CompanyServiceReference.Company[] GetAllCompanies() {
+            return base.Channel.GetAllCompanies();
+        }
+        
+        public System.Threading.Tasks.Task<Client.CompanyServiceReference.Company[]> GetAllCompaniesAsync() {
+            return base.Channel.GetAllCompaniesAsync();
+        }
+        
+        public Client.CompanyServiceReference.Company GetCompany(int Id, string companyName, string countryCode, string companyType) {
+            return base.Channel.GetCompany(Id, companyName, countryCode, companyType);
+        }
+        
+        public System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetCompanyAsync(int Id, string companyName, string countryCode, string companyType) {
+            return base.Channel.GetCompanyAsync(Id, companyName, countryCode, companyType);
+        }
+        
+        public bool CreateCompany(Client.CompanyServiceReference.Company company) {
+            return base.Channel.CreateCompany(company);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CreateCompanyAsync(Client.CompanyServiceReference.Company company) {
+            return base.Channel.CreateCompanyAsync(company);
+        }
+        
         public Client.CompanyServiceReference.CompanyType[] GetAllCompanyTypes() {
             return base.Channel.GetAllCompanyTypes();
         }
         
         public System.Threading.Tasks.Task<Client.CompanyServiceReference.CompanyType[]> GetAllCompanyTypesAsync() {
             return base.Channel.GetAllCompanyTypesAsync();
-        }
-        
-        public Client.CompanyServiceReference.Company GetDataUsingDataContract(Client.CompanyServiceReference.Company composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
-        }
-        
-        public System.Threading.Tasks.Task<Client.CompanyServiceReference.Company> GetDataUsingDataContractAsync(Client.CompanyServiceReference.Company composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }
 }

@@ -9,15 +9,15 @@ namespace Service
     public interface ICompanyService
     {
         [OperationContract]
-        IEnumerable<CompanyType> GetAllCompanyTypes();
+        IEnumerable<Company> GetAllCompanies();
 
         [OperationContract]
-        Company GetDataUsingDataContract(Company composite);
+        Company GetCompany(int Id, string companyName, string countryCode, string companyType);
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        bool CreateCompany(Company company);
+
+        [OperationContract]
+        IEnumerable<CompanyType> GetAllCompanyTypes();
     }
-
-
-    //TODO: move
-
 }

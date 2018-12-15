@@ -48,5 +48,10 @@ namespace Client.DataAccess
                             CompanyType = c.Type.Name
                         }).ToList();
         }
+
+        internal void CreateCompany(Company company)
+        {
+            _service.CreateCompany(company);
+        }
     }
 }

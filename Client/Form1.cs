@@ -41,6 +41,14 @@ namespace Client
 
         }
 
+        private void btnAddCompany_Click(object sender, EventArgs e)
+        {
+            using (var modal = new NewCompanyDialog(_dataRepo))
+            {
+                modal.ShowDialog(this);
+            }
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();

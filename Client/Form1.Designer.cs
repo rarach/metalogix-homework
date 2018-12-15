@@ -127,6 +127,7 @@
             this.btnAddCompany.TabIndex = 9;
             this.btnAddCompany.Text = "Add";
             this.btnAddCompany.UseVisualStyleBackColor = true;
+            this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
             // 
             // gridResults
             // 

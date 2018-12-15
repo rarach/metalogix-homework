@@ -35,23 +35,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCountryCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCompanyTypes = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(227, 283);
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAdd.Location = new System.Drawing.Point(124, 138);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Create";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(308, 283);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(205, 138);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 1;
@@ -73,7 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCompanyName.Location = new System.Drawing.Point(102, 10);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(281, 20);
+            this.txtCompanyName.Size = new System.Drawing.Size(178, 20);
             this.txtCompanyName.TabIndex = 3;
             // 
             // label2
@@ -101,20 +104,24 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Company type:";
             // 
-            // comboBox1
+            // cbCompanyTypes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(102, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 21);
-            this.comboBox1.TabIndex = 7;
+            this.cbCompanyTypes.DisplayMember = "Text";
+            this.cbCompanyTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCompanyTypes.FormattingEnabled = true;
+            this.cbCompanyTypes.Location = new System.Drawing.Point(102, 64);
+            this.cbCompanyTypes.Name = "cbCompanyTypes";
+            this.cbCompanyTypes.Size = new System.Drawing.Size(178, 21);
+            this.cbCompanyTypes.TabIndex = 7;
             // 
             // NewCompanyDialog
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 318);
-            this.Controls.Add(this.comboBox1);
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(292, 173);
+            this.Controls.Add(this.cbCompanyTypes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCountryCode);
             this.Controls.Add(this.label2);
@@ -122,7 +129,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
-            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.MinimumSize = new System.Drawing.Size(300, 200);
             this.Name = "NewCompanyDialog";
             this.Text = "Create new company";
             this.ResumeLayout(false);
@@ -139,6 +146,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCountryCode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCompanyTypes;
     }
 }
