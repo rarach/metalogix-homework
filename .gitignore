@@ -4,6 +4,7 @@
 # Compiled assemblies
 Client/bin/*
 Client/obj/*
+Database/Database.dbmdl
 Database/bin/*
 Database/obj/*
 Service/bin/*

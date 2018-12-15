@@ -41,7 +41,7 @@
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCountryCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCompanyType = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colCompanyType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +142,6 @@
             this.colCompanyType});
             this.gridResults.Location = new System.Drawing.Point(16, 65);
             this.gridResults.Name = "gridResults";
-            this.gridResults.ReadOnly = true;
             this.gridResults.RowHeadersVisible = false;
             this.gridResults.Size = new System.Drawing.Size(662, 399);
             this.gridResults.TabIndex = 10;
@@ -153,27 +152,26 @@
             this.colID.DataPropertyName = "ID";
             this.colID.HeaderText = "ID";
             this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
             this.colID.Width = 80;
             // 
             // colCompanyName
             // 
             this.colCompanyName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCompanyName.DataPropertyName = "Name";
             this.colCompanyName.HeaderText = "Company name";
             this.colCompanyName.Name = "colCompanyName";
-            this.colCompanyName.ReadOnly = true;
             // 
             // colCountryCode
             // 
+            this.colCountryCode.DataPropertyName = "CountryCode";
             this.colCountryCode.HeaderText = "Country code";
             this.colCountryCode.Name = "colCountryCode";
-            this.colCountryCode.ReadOnly = true;
             // 
             // colCompanyType
             // 
-            this.colCompanyType.HeaderText = "Company type";
+            this.colCompanyType.DataPropertyName = "CompanyType";
+            this.colCompanyType.HeaderText = "CompanyType";
             this.colCompanyType.Name = "colCompanyType";
-            this.colCompanyType.ReadOnly = true;
             this.colCompanyType.Width = 120;
             // 
             // Form1
@@ -215,7 +213,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCountryCode;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colCompanyType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyType;
     }
 }
 
