@@ -23,14 +23,44 @@ namespace Client
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var newCompany = new Company
+            if (validate())
             {
-                Name = txtCompanyName.Text,
-                CountryCode = txtCountryCode.Text,
-                Type = new CompanyType { ID = ((CompanyTypeItem)cbCompanyTypes.SelectedItem).ID }
-            };
+                var newCompany = new Company
+                {
+                    Name = txtCompanyName.Text,
+                    CountryCode = txtCountryCode.Text,
+                    Type = new CompanyType {ID = ((CompanyTypeItem) cbCompanyTypes.SelectedItem).ID}
+                };
 
-            _dataRepo.CreateCompany(newCompany);
+                _dataRepo.CreateCompany(newCompany);
+            }
+            else
+            {
+                DialogResult = DialogResult.None;
+            }
+        }
+
+        private bool validate()
+        {
+            bool valid = true;
+            lblError.Text = null;
+
+            if (String.IsNullOrWhiteSpace(txtCompanyName.Text))
+            {
+                valid = false;
+                lblError.Text = "Company name must be given";
+            }
+            if (String.IsNullOrWhiteSpace(txtCountryCode.Text))
+            {
+                if (!valid)
+                {
+                    lblError.Text += Environment.NewLine;
+                }
+                valid = false;
+                lblError.Text += "Country code must be given";
+            }
+
+            return valid;
         }
     }
 }

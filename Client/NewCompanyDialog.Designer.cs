@@ -36,6 +36,7 @@
             this.txtCountryCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbCompanyTypes = new System.Windows.Forms.ComboBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -114,6 +115,15 @@
             this.cbCompanyTypes.Size = new System.Drawing.Size(178, 21);
             this.cbCompanyTypes.TabIndex = 7;
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(13, 91);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 13);
+            this.lblError.TabIndex = 8;
+            // 
             // NewCompanyDialog
             // 
             this.AcceptButton = this.btnAdd;
@@ -121,6 +131,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(292, 173);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.cbCompanyTypes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCountryCode);
@@ -147,5 +158,6 @@
         private System.Windows.Forms.TextBox txtCountryCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbCompanyTypes;
+        private System.Windows.Forms.Label lblError;
     }
 }
