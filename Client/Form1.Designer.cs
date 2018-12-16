@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Company identificator:";
             // 
             // txtCompanyId
@@ -61,7 +61,7 @@
             this.txtCompanyId.Location = new System.Drawing.Point(129, 36);
             this.txtCompanyId.Name = "txtCompanyId";
             this.txtCompanyId.Size = new System.Drawing.Size(100, 20);
-            this.txtCompanyId.TabIndex = 1;
+            this.txtCompanyId.TabIndex = 3;
             // 
             // label2
             // 
@@ -69,7 +69,7 @@
             this.label2.Location = new System.Drawing.Point(249, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Country code:";
             // 
             // txtCountryCode
@@ -77,7 +77,7 @@
             this.txtCountryCode.Location = new System.Drawing.Point(328, 36);
             this.txtCountryCode.Name = "txtCountryCode";
             this.txtCountryCode.Size = new System.Drawing.Size(100, 20);
-            this.txtCountryCode.TabIndex = 3;
+            this.txtCountryCode.TabIndex = 5;
             // 
             // label3
             // 
@@ -85,7 +85,7 @@
             this.label3.Location = new System.Drawing.Point(447, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Company type:";
             // 
             // cbCompanyTypes
@@ -96,7 +96,7 @@
             this.cbCompanyTypes.Location = new System.Drawing.Point(530, 36);
             this.cbCompanyTypes.Name = "cbCompanyTypes";
             this.cbCompanyTypes.Size = new System.Drawing.Size(148, 21);
-            this.cbCompanyTypes.TabIndex = 5;
+            this.cbCompanyTypes.TabIndex = 7;
             // 
             // btnFind
             // 
@@ -104,7 +104,7 @@
             this.btnFind.Location = new System.Drawing.Point(603, 63);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
-            this.btnFind.TabIndex = 6;
+            this.btnFind.TabIndex = 8;
             this.btnFind.Text = "find";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
@@ -115,7 +115,7 @@
             this.btnClose.Location = new System.Drawing.Point(603, 518);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 8;
+            this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -126,7 +126,7 @@
             this.btnAddCompany.Location = new System.Drawing.Point(522, 518);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(75, 23);
-            this.btnAddCompany.TabIndex = 9;
+            this.btnAddCompany.TabIndex = 11;
             this.btnAddCompany.Text = "Add";
             this.btnAddCompany.UseVisualStyleBackColor = true;
             this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
@@ -147,7 +147,7 @@
             this.gridResults.Name = "gridResults";
             this.gridResults.RowHeadersVisible = false;
             this.gridResults.Size = new System.Drawing.Size(662, 420);
-            this.gridResults.TabIndex = 10;
+            this.gridResults.TabIndex = 9;
             // 
             // colID
             // 
@@ -183,7 +183,7 @@
             this.label4.Location = new System.Drawing.Point(13, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 11;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Company name:";
             // 
             // txtCompanyName
@@ -191,7 +191,7 @@
             this.txtCompanyName.Location = new System.Drawing.Point(129, 10);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(299, 20);
-            this.txtCompanyName.TabIndex = 12;
+            this.txtCompanyName.TabIndex = 1;
             // 
             // Form1
             // 
