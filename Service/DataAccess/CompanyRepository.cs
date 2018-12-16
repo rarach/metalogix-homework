@@ -18,11 +18,6 @@ namespace Service.DataAccess
         }
 
 
-        internal IEnumerable<Company> GetAllCompanies()
-        {
-            return GetCompanies(-1, null, null, null);
-        }
-
         internal IEnumerable<Company> GetCompanies(int id, string companyName, string countryCode, string type)
         {
             var companies = new List<Company>();

@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Configuration;
 using Service.DataAccess;
 using Service.Model;
 
@@ -8,12 +8,12 @@ namespace Service
 {
     public class CompanyService : ICompanyService
     {
-        private readonly CompanyRepository _repository = new CompanyRepository("Server=localhost\\SCBN_MARMIHA;Database=METALOGIX;Trusted_Connection=True;"/*TODO: from web.config!!!*/);
+        private readonly CompanyRepository _repository = new CompanyRepository(ConfigurationManager.ConnectionStrings["metalogix_db"].ConnectionString);
 
 
         public IEnumerable<Company> GetAllCompanies()
         {
-            throw new NotImplementedException();
+            return _repository.GetCompanies(-1, null, null, null);
         }
 
         /// <summary>

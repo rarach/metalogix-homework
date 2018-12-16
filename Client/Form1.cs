@@ -9,7 +9,7 @@ namespace Client
 {
     public partial class Form1 : Form
     {
-        private readonly CompanyDataClient _dataRepo;// = new CompanyDataClient(/*TODO*/"http://localhost:56417/CompanyService.svc");
+        private readonly CompanyDataClient _dataRepo;
 
 
         internal Form1(CompanyDataClient dataClient)
