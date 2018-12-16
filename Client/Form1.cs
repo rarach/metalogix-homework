@@ -54,6 +54,7 @@ namespace Client
             Application.Exit();
         }
 
+
         #region Textbox placeholders
 
         private void setPlaceholder(TextBox textbox)
