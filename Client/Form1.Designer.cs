@@ -62,6 +62,9 @@
             this.txtCompanyId.Name = "txtCompanyId";
             this.txtCompanyId.Size = new System.Drawing.Size(100, 20);
             this.txtCompanyId.TabIndex = 3;
+            this.txtCompanyId.Tag = "Enter ID number...";
+            this.txtCompanyId.Enter += new System.EventHandler(this.textbox_Enter);
+            this.txtCompanyId.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // label2
             // 
@@ -78,6 +81,9 @@
             this.txtCountryCode.Name = "txtCountryCode";
             this.txtCountryCode.Size = new System.Drawing.Size(100, 20);
             this.txtCountryCode.TabIndex = 5;
+            this.txtCountryCode.Tag = "Enter text...";
+            this.txtCountryCode.Enter += new System.EventHandler(this.textbox_Enter);
+            this.txtCountryCode.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // label3
             // 
@@ -105,7 +111,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 8;
-            this.btnFind.Text = "find";
+            this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -123,16 +129,17 @@
             // btnAddCompany
             // 
             this.btnAddCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddCompany.Location = new System.Drawing.Point(522, 518);
+            this.btnAddCompany.Location = new System.Drawing.Point(504, 518);
             this.btnAddCompany.Name = "btnAddCompany";
-            this.btnAddCompany.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCompany.Size = new System.Drawing.Size(92, 23);
             this.btnAddCompany.TabIndex = 11;
-            this.btnAddCompany.Text = "Add";
+            this.btnAddCompany.Text = "Add company";
             this.btnAddCompany.UseVisualStyleBackColor = true;
             this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
             // 
             // gridResults
             // 
+            this.gridResults.AllowUserToAddRows = false;
             this.gridResults.AllowUserToDeleteRows = false;
             this.gridResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -192,6 +199,9 @@
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Size = new System.Drawing.Size(299, 20);
             this.txtCompanyName.TabIndex = 1;
+            this.txtCompanyName.Tag = "Enter text...";
+            this.txtCompanyName.Enter += new System.EventHandler(this.textbox_Enter);
+            this.txtCompanyName.Leave += new System.EventHandler(this.textbox_Leave);
             // 
             // Form1
             // 

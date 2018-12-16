@@ -48,7 +48,7 @@ namespace Client
             if (String.IsNullOrWhiteSpace(txtCompanyName.Text))
             {
                 valid = false;
-                lblError.Text = "Company name must be given";
+                lblError.Text = "Company name must be given.";
             }
             if (String.IsNullOrWhiteSpace(txtCountryCode.Text))
             {
@@ -57,7 +57,7 @@ namespace Client
                     lblError.Text += Environment.NewLine;
                 }
                 valid = false;
-                lblError.Text += "Country code must be given";
+                lblError.Text += "Country code must be given.";
             }
 
             return valid;
