@@ -59,7 +59,7 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CrateDB.sql" />
+    <None Include="CreateDB.sql" />
     <None Include="DeleteDB.sql" />
   </ItemGroup>
 </Project>

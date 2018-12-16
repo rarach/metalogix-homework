@@ -17,7 +17,13 @@ namespace Service.DataAccess
             _connectionString = connectionString;
         }
 
-
+        /// <summary>
+        /// Retrieve collection of matching companies based on specified filter.
+        /// </summary>
+        /// <param name="id">Company ID. If given, all the other filters are ignored</param>
+        /// <param name="companyName">Company name, case sensitive. Companies containing this piece of text anywhere in their name will be included</param>
+        /// <param name="countryCode">Country code, case sensitive.</param>
+        /// <param name="type">Company type as a string</param>
         internal IEnumerable<Company> GetCompanies(int id, string companyName, string countryCode, string type)
         {
             var companies = new List<Company>();
@@ -116,6 +122,9 @@ namespace Service.DataAccess
             }
         }
 
+        /// <summary>
+        /// Get all company types. Usefull to pupulate respective combo boxes.
+        /// </summary>
         internal IEnumerable<CompanyType> GetCompanyTypes()
         {
             var companyTypes = new List<CompanyType>();
