@@ -42,13 +42,15 @@
             this.colCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCountryCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCompanyType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridResults)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +58,7 @@
             // 
             // txtCompanyId
             // 
-            this.txtCompanyId.Location = new System.Drawing.Point(130, 10);
+            this.txtCompanyId.Location = new System.Drawing.Point(129, 36);
             this.txtCompanyId.Name = "txtCompanyId";
             this.txtCompanyId.Size = new System.Drawing.Size(100, 20);
             this.txtCompanyId.TabIndex = 1;
@@ -64,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(249, 13);
+            this.label2.Location = new System.Drawing.Point(249, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             // txtCountryCode
             // 
-            this.txtCountryCode.Location = new System.Drawing.Point(328, 10);
+            this.txtCountryCode.Location = new System.Drawing.Point(328, 36);
             this.txtCountryCode.Name = "txtCountryCode";
             this.txtCountryCode.Size = new System.Drawing.Size(100, 20);
             this.txtCountryCode.TabIndex = 3;
@@ -80,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(447, 13);
+            this.label3.Location = new System.Drawing.Point(447, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 4;
@@ -91,7 +93,7 @@
             this.cbCompanyTypes.DisplayMember = "Text";
             this.cbCompanyTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCompanyTypes.FormattingEnabled = true;
-            this.cbCompanyTypes.Location = new System.Drawing.Point(530, 9);
+            this.cbCompanyTypes.Location = new System.Drawing.Point(530, 36);
             this.cbCompanyTypes.Name = "cbCompanyTypes";
             this.cbCompanyTypes.Size = new System.Drawing.Size(148, 21);
             this.cbCompanyTypes.TabIndex = 5;
@@ -99,7 +101,7 @@
             // btnFind
             // 
             this.btnFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFind.Location = new System.Drawing.Point(603, 36);
+            this.btnFind.Location = new System.Drawing.Point(603, 63);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 6;
@@ -110,7 +112,7 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(603, 470);
+            this.btnClose.Location = new System.Drawing.Point(603, 518);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 8;
@@ -121,7 +123,7 @@
             // btnAddCompany
             // 
             this.btnAddCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddCompany.Location = new System.Drawing.Point(522, 470);
+            this.btnAddCompany.Location = new System.Drawing.Point(522, 518);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(75, 23);
             this.btnAddCompany.TabIndex = 9;
@@ -141,10 +143,10 @@
             this.colCompanyName,
             this.colCountryCode,
             this.colCompanyType});
-            this.gridResults.Location = new System.Drawing.Point(16, 65);
+            this.gridResults.Location = new System.Drawing.Point(16, 92);
             this.gridResults.Name = "gridResults";
             this.gridResults.RowHeadersVisible = false;
-            this.gridResults.Size = new System.Drawing.Size(662, 399);
+            this.gridResults.Size = new System.Drawing.Size(662, 420);
             this.gridResults.TabIndex = 10;
             // 
             // colID
@@ -175,11 +177,30 @@
             this.colCompanyType.Name = "colCompanyType";
             this.colCompanyType.Width = 120;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Company name:";
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Location = new System.Drawing.Point(129, 10);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(299, 20);
+            this.txtCompanyName.TabIndex = 12;
+            // 
             // Form1
             // 
+            this.AcceptButton = this.btnFind;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 505);
+            this.ClientSize = new System.Drawing.Size(692, 553);
+            this.Controls.Add(this.txtCompanyName);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.gridResults);
             this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.btnClose);
@@ -215,6 +236,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCountryCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCompanyType;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCompanyName;
     }
 }
 

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+
 using Client.DataAccess;
+using Client.ViewModel;
 
 
 namespace Client
@@ -27,7 +29,8 @@ namespace Client
         {
             int dummy;
             int id = int.TryParse(txtCompanyId.Text, out dummy) ? dummy : -1;
-            gridResults.DataSource = _dataRepo.GetCompanies(id, /*todo txtCompanyName.Text*/null, txtCountryCode.Text, cbCompanyTypes.SelectedText);
+            string type = ((CompanyTypeItem) cbCompanyTypes.SelectedValue)?.Text;
+            gridResults.DataSource = _dataRepo.GetCompanies(id, txtCompanyName.Text, txtCountryCode.Text, type);
         }
 
         private void btnAddCompany_Click(object sender, EventArgs e)
